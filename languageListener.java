@@ -17,25 +17,45 @@ public interface languageListener extends ParseTreeListener {
 	 */
 	void exitLang(languageParser.LangContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link languageParser#declaration}.
+	 * Enter a parse tree produced by {@link languageParser#affectation}.
 	 * @param ctx the parse tree
 	 */
-	void enterDeclaration(languageParser.DeclarationContext ctx);
+	void enterAffectation(languageParser.AffectationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link languageParser#declaration}.
+	 * Exit a parse tree produced by {@link languageParser#affectation}.
 	 * @param ctx the parse tree
 	 */
-	void exitDeclaration(languageParser.DeclarationContext ctx);
+	void exitAffectation(languageParser.AffectationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link languageParser#constante}.
+	 * Enter a parse tree produced by {@link languageParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterConstante(languageParser.ConstanteContext ctx);
+	void enterExpression(languageParser.ExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link languageParser#constante}.
+	 * Exit a parse tree produced by {@link languageParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitConstante(languageParser.ConstanteContext ctx);
+	void exitExpression(languageParser.ExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link languageParser#decVar}.
+	 * @param ctx the parse tree
+	 */
+	void enterDecVar(languageParser.DecVarContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link languageParser#decVar}.
+	 * @param ctx the parse tree
+	 */
+	void exitDecVar(languageParser.DecVarContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link languageParser#decConst}.
+	 * @param ctx the parse tree
+	 */
+	void enterDecConst(languageParser.DecConstContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link languageParser#decConst}.
+	 * @param ctx the parse tree
+	 */
+	void exitDecConst(languageParser.DecConstContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link languageParser#type}.
 	 * @param ctx the parse tree

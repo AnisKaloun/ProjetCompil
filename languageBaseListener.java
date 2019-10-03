@@ -27,25 +27,49 @@ public class languageBaseListener implements languageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaration(languageParser.DeclarationContext ctx) { }
+	@Override public void enterAffectation(languageParser.AffectationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaration(languageParser.DeclarationContext ctx) { }
+	@Override public void exitAffectation(languageParser.AffectationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstante(languageParser.ConstanteContext ctx) { }
+	@Override public void enterExpression(languageParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitConstante(languageParser.ConstanteContext ctx) { }
+	@Override public void exitExpression(languageParser.ExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDecVar(languageParser.DecVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDecVar(languageParser.DecVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterDecConst(languageParser.DecConstContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDecConst(languageParser.DecConstContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
