@@ -7,25 +7,25 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface languageListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link languageParser#lang}.
+	 * Enter a parse tree produced by {@link languageParser#prog}.
 	 * @param ctx the parse tree
 	 */
-	void enterLang(languageParser.LangContext ctx);
+	void enterProg(languageParser.ProgContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link languageParser#lang}.
+	 * Exit a parse tree produced by {@link languageParser#prog}.
 	 * @param ctx the parse tree
 	 */
-	void exitLang(languageParser.LangContext ctx);
+	void exitProg(languageParser.ProgContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link languageParser#declarationP}.
+	 * Enter a parse tree produced by {@link languageParser#definitionF}.
 	 * @param ctx the parse tree
 	 */
-	void enterDeclarationP(languageParser.DeclarationPContext ctx);
+	void enterDefinitionF(languageParser.DefinitionFContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link languageParser#declarationP}.
+	 * Exit a parse tree produced by {@link languageParser#definitionF}.
 	 * @param ctx the parse tree
 	 */
-	void exitDeclarationP(languageParser.DeclarationPContext ctx);
+	void exitDefinitionF(languageParser.DefinitionFContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link languageParser#instruction}.
 	 * @param ctx the parse tree
@@ -116,4 +116,14 @@ public interface languageListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitType(languageParser.TypeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link languageParser#phi}.
+	 * @param ctx the parse tree
+	 */
+	void enterPhi(languageParser.PhiContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link languageParser#phi}.
+	 * @param ctx the parse tree
+	 */
+	void exitPhi(languageParser.PhiContext ctx);
 }

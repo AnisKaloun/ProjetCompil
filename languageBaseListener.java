@@ -15,25 +15,25 @@ public class languageBaseListener implements languageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLang(languageParser.LangContext ctx) { }
+	@Override public void enterProg(languageParser.ProgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLang(languageParser.LangContext ctx) { }
+	@Override public void exitProg(languageParser.ProgContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclarationP(languageParser.DeclarationPContext ctx) { }
+	@Override public void enterDefinitionF(languageParser.DefinitionFContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclarationP(languageParser.DeclarationPContext ctx) { }
+	@Override public void exitDefinitionF(languageParser.DefinitionFContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -142,6 +142,18 @@ public class languageBaseListener implements languageListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitType(languageParser.TypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPhi(languageParser.PhiContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPhi(languageParser.PhiContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
