@@ -17,6 +17,26 @@ public interface languageListener extends ParseTreeListener {
 	 */
 	void exitLang(languageParser.LangContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link languageParser#declarationP}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclarationP(languageParser.DeclarationPContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link languageParser#declarationP}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclarationP(languageParser.DeclarationPContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link languageParser#instruction}.
+	 * @param ctx the parse tree
+	 */
+	void enterInstruction(languageParser.InstructionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link languageParser#instruction}.
+	 * @param ctx the parse tree
+	 */
+	void exitInstruction(languageParser.InstructionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link languageParser#affectation}.
 	 * @param ctx the parse tree
 	 */
@@ -36,6 +56,36 @@ public interface languageListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExpression(languageParser.ExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link languageParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void enterCondition(languageParser.ConditionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link languageParser#condition}.
+	 * @param ctx the parse tree
+	 */
+	void exitCondition(languageParser.ConditionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link languageParser#boucle}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoucle(languageParser.BoucleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link languageParser#boucle}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoucle(languageParser.BoucleContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link languageParser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclaration(languageParser.DeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link languageParser#declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclaration(languageParser.DeclarationContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link languageParser#decVar}.
 	 * @param ctx the parse tree

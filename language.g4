@@ -2,7 +2,13 @@
 
 grammar language;
 
-lang : Variable*;
+lang : declarationP;
+
+declarationP:(instruction|declaration)+;
+//instruction
+
+instruction :(condition|boucle|affectation)(';'instruction)*;
+
 
 //affectation
 
@@ -10,15 +16,18 @@ affectation : Variable ':=' expression;
 
 
 //partie Expression
-expression :Variable |Number | UOP expression | expression (Arith|Compar|Logical) expression
+expression : UOP expression | expression (Arith|Compar|Logical) expression
 
-            |expression'[' expression ']'; //pas encore fait le tableau
+            |expression'[' expression ']'|affectation|Variable |Number; //pas encore fait le tableau
 
+condition: 'if' expression 'then' (instruction)+'else' (instruction)+;
 
+boucle :'while' expression 'do' instruction;
 
 //partie declaration de variable et de constante
+declaration :decVar|decConst;
 decVar :'var' Variable ':' type;
-decConst: Variable ':=' (Number|'true'|'false');
+decConst:'const' Variable ':' (Number|'true'|'false');
 
 type : 'integer'|'boolean'|'array of';
 //la partie array n'ai tjrs pas faites
@@ -29,5 +38,5 @@ Logical:'and'|'or';
 Compar :'<'|'≤'|'='|'!='|'>'|'≥';
 Variable : [a-zA-Z]+[0-9]*;
 Number:[0-9]+;
-NEWLINE:('\r'?'\n'|'\r')+ ;
+NEWLINE:('\r'?'\n'|'\r')+ ->skip;
 WS : [ \t\r\n]+ -> skip;
